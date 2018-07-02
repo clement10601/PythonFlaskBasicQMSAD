@@ -1,0 +1,13 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: PythonFlaskBasicQMSAD
+  buildpack: python_buildpack
+  command: python manage.py start 0.0.0.0:$PORT
+  memory: 256MB
+  domain: mybluemix.net
+  host: python-flask-basic-qmsad
+  env:
+    FLASK_APP : server
+    FLASK_DEBUG : false
